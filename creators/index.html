@@ -3,284 +3,30 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="NEXA Creators — escolha um produto digital, receba materiais de divulgação e comece a construir sua operação como afiliado.">
+<meta name="description" content="NEXA Creators — programa para creators 18+ com produtos digitais, comissão, kit de conteúdo, desafios e progressão por performance.">
 <meta name="theme-color" content="#07090c">
-<title>NEXA Creators | Programa de Afiliados</title>
+<title>NEXA Creators | Crie. Venda. Evolua.</title>
 <style>
-:root{
-  --bg:#07090c;--bg2:#0b0f14;--card:#0f151c;--card2:#111922;
-  --line:#24303b;--text:#f5f7fa;--muted:#a9b4c0;
-  --green:#b7ff00;--green2:#8de400;--green3:#dfff86;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  margin:0;color:var(--text);
-  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
-  background:
-    radial-gradient(circle at 82% 0,rgba(183,255,0,.14),transparent 26rem),
-    radial-gradient(circle at 0 30%,rgba(183,255,0,.06),transparent 24rem),
-    var(--bg);
-}
-a{text-decoration:none;color:inherit}
-button{font:inherit}
-.container{width:min(1160px,calc(100% - 36px));margin:auto}
-.nav{height:76px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.06)}
-.logo{font-weight:950;letter-spacing:.13em;font-size:21px}.logo span{color:var(--green)}
-.navlink{border:1px solid #465a1f;padding:11px 16px;border-radius:999px;font-size:14px;font-weight:850;background:#0d130a}
-.hero{min-height:690px;padding:82px 0 58px;display:grid;grid-template-columns:1.18fr .82fr;gap:48px;align-items:center}
-.pill{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border:1px solid #3c4b1e;background:#101508;border-radius:999px;color:var(--green3);font-size:13px;font-weight:850}
-h1{font-size:clamp(48px,6.7vw,86px);line-height:.97;letter-spacing:-.055em;margin:20px 0 22px;max-width:850px}
-h1 strong{color:var(--green)}
-.lead{font-size:20px;line-height:1.55;color:#c9d1d9;max-width:760px}
-.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
-.btn{border:0;border-radius:14px;padding:16px 20px;font-weight:950;cursor:pointer;display:inline-flex;justify-content:center;align-items:center;transition:.18s transform,.18s filter}
-.btn:hover{transform:translateY(-2px);filter:brightness(1.04)}
-.primary{background:var(--green);color:#090c0e}
-.secondary{background:#10161d;border:1px solid var(--line);color:#eef3f6}
-.micro{font-size:12px;color:#7f8a95;margin-top:13px}
-.hero-panel{background:linear-gradient(180deg,#121a22,#0d1218);border:1px solid #2b3843;border-radius:26px;padding:28px;box-shadow:0 35px 90px rgba(0,0,0,.4)}
-.hero-panel .eyebrow{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#8f9ba6}
-.big{font-size:52px;font-weight:950;letter-spacing:-.05em;margin:6px 0;color:var(--green)}
-.rule{height:1px;background:var(--line);margin:22px 0}
-.benefit{display:flex;gap:12px;margin:16px 0}.dot{width:24px;height:24px;flex:0 0 24px;border-radius:50%;display:grid;place-items:center;background:var(--green);color:#07090c;font-weight:950}.benefit b{display:block}.benefit span{display:block;color:var(--muted);font-size:14px;margin-top:3px;line-height:1.4}
-.section{padding:76px 0}
-.section-head{max-width:820px}
-.kicker{font-size:13px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:var(--green)}
-h2{font-size:clamp(36px,5vw,55px);line-height:1.04;letter-spacing:-.045em;margin:10px 0 16px}
-.intro{color:var(--muted);font-size:18px;line-height:1.65}
-.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:32px}
-.feature{background:var(--card);border:1px solid var(--line);border-radius:21px;padding:25px}
-.feature .ico{font-size:30px}.feature h3{font-size:21px;margin:16px 0 8px}.feature p{margin:0;color:var(--muted);line-height:1.6}
-.products{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:34px}
-.product{position:relative;overflow:hidden;background:linear-gradient(180deg,#111923,#0c1117);border:1px solid #2a3540;border-radius:24px;padding:27px;display:flex;flex-direction:column;min-height:450px}
-.product:after{content:"";position:absolute;width:210px;height:210px;border-radius:50%;right:-100px;bottom:-115px;background:rgba(183,255,0,.07)}
-.product.featured{border-color:#5c7821;box-shadow:0 0 0 1px rgba(183,255,0,.12),0 20px 70px rgba(183,255,0,.04)}
-.tag{align-self:flex-start;border:1px solid #3d4c1e;background:#131909;color:var(--green3);border-radius:999px;padding:7px 10px;font-size:11px;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
-.product h3{font-size:29px;letter-spacing:-.03em;margin:17px 0 8px}
-.price{font-size:17px;font-weight:850;color:#edf2f5}
-.product p{color:var(--muted);line-height:1.55}
-.product ul{padding-left:19px;color:#c0c8d0;line-height:1.7;margin-bottom:24px}
-.product .bottom{margin-top:auto;position:relative;z-index:2}
-.product .btn{width:100%}
-.message{font-size:11px;text-align:center;color:#7f8a95;margin-top:9px}
-.band{background:linear-gradient(90deg,var(--green),#94e900);color:#080b0d;border-radius:24px;padding:30px 32px;display:grid;grid-template-columns:1.1fr .9fr;gap:25px;align-items:center}
-.band h3{font-size:38px;line-height:1.05;letter-spacing:-.035em;margin:0}
-.band p{margin:8px 0 0;font-weight:650;line-height:1.55}
-.band .black{background:#080b0d;color:#fff;border-radius:18px;padding:22px}
-.band .black b{display:block;color:var(--green);font-size:20px;margin-bottom:8px}
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:32px}
-.step{background:#0d1319;border:1px solid var(--line);border-top:2px solid var(--green);padding:21px;border-radius:0 0 14px 14px}
-.step span{font-size:11px;letter-spacing:.11em;text-transform:uppercase;color:#87929e}.step b{display:block;margin-top:8px;font-size:18px}
-.days{display:grid;grid-template-columns:repeat(7,1fr);gap:10px;margin-top:30px}
-.day{background:#0f151b;border:1px solid var(--line);border-radius:15px;padding:15px;min-height:145px}.day b{color:var(--green);font-size:14px}.day p{font-size:13px;line-height:1.45;color:#b0bac4;margin:8px 0 0}
-.founders{padding:42px;background:linear-gradient(135deg,#101808,#10161d 70%);border:1px solid #42551f;border-radius:28px}
-.founders h2{margin-top:0}.founders strong{color:var(--green)}
-.faq{display:grid;gap:12px;margin-top:28px}
-details{background:#0d1319;border:1px solid var(--line);border-radius:15px;padding:18px 20px}
-summary{cursor:pointer;font-weight:850}details p{color:var(--muted);line-height:1.6}
-.final{margin:35px 0 75px;text-align:center;padding:54px 30px;border-radius:30px;background:linear-gradient(145deg,#11190c,#0d1218 72%);border:1px solid #40531c}
-.final h2{max-width:900px;margin:0 auto 15px}.final p{font-size:18px;color:#c5cdd5}.final .btn{margin-top:14px}
-.disclaimer{max-width:760px;margin:18px auto 0;color:#7d8994;font-size:11px;line-height:1.6}
-footer{border-top:1px solid rgba(255,255,255,.07);padding:28px 0 42px;color:#76818c;font-size:13px}
-.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,30px);opacity:0;background:#f5f7fa;color:#080b0d;padding:12px 16px;border-radius:12px;font-weight:850;transition:.25s;z-index:50;box-shadow:0 14px 50px rgba(0,0,0,.35)}
-.toast.show{opacity:1;transform:translate(-50%,0)}
-@media(max-width:980px){
- .hero{grid-template-columns:1fr;min-height:auto;padding-top:55px}.grid3,.products{grid-template-columns:1fr}.band{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.days{grid-template-columns:repeat(2,1fr)}
-}
-@media(max-width:580px){
- .container{width:min(100% - 26px,1160px)}.navlink{display:none}.hero{padding-top:45px}.lead{font-size:18px}.actions .btn{width:100%}.steps,.days{grid-template-columns:1fr}.founders{padding:28px 22px}.section{padding:58px 0}.product{min-height:0}
-}
+:root{--bg:#06080b;--panel:#0e151c;--line:#25313d;--text:#f6f8fb;--muted:#a8b4c1;--lime:#b7ff00;--lime-soft:#dcff7a}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:radial-gradient(circle at 82% 3%,rgba(183,255,0,.15),transparent 25rem),radial-gradient(circle at 10% 18%,rgba(96,240,255,.06),transparent 22rem),linear-gradient(180deg,#06080b 0%,#080b0f 48%,#06080b 100%)}a{color:inherit;text-decoration:none}button,input,select{font:inherit}button{cursor:pointer}.container{width:min(1180px,calc(100% - 36px));margin:auto}.nav{height:78px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.06)}.logo{font-size:21px;font-weight:950;letter-spacing:.12em}.logo span{color:var(--lime)}.nav-actions{display:flex;gap:10px;align-items:center}.navlink{font-size:13px;font-weight:850;color:#cfd7df}.navcta{padding:10px 15px;border:1px solid #526a24;background:#0e1508;border-radius:999px;font-weight:900;font-size:13px}.hero{padding:70px 0 52px;display:grid;grid-template-columns:1.12fr .88fr;gap:46px;align-items:center;min-height:690px}.pill{display:inline-flex;align-items:center;gap:9px;border:1px solid #3d4e1b;background:#111708;color:var(--lime-soft);border-radius:999px;padding:8px 12px;font-weight:850;font-size:13px}h1{font-size:clamp(49px,6.8vw,88px);line-height:.95;letter-spacing:-.058em;margin:20px 0 22px}h1 strong{color:var(--lime)}.lead{font-size:20px;line-height:1.58;color:#cad2db;max-width:770px}.hero-badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:22px}.badge{padding:8px 10px;border-radius:10px;background:#10161c;border:1px solid #25303a;color:#b8c2cc;font-size:12px;font-weight:800}.actions{display:flex;gap:11px;flex-wrap:wrap;margin-top:28px}.btn{border:0;border-radius:14px;padding:16px 21px;font-weight:950;display:inline-flex;align-items:center;justify-content:center;transition:.18s transform,.18s filter}.btn:hover{transform:translateY(-2px);filter:brightness(1.04)}.primary{background:var(--lime);color:#080b0d}.secondary{background:#10161d;color:#f3f6f8;border:1px solid var(--line)}.micro{font-size:11px;color:#7d8995;line-height:1.55;margin-top:12px;max-width:760px}.life-board{position:relative;border-radius:28px;padding:18px;background:linear-gradient(145deg,#121b24,#0b1016);border:1px solid #2a3742;box-shadow:0 35px 100px rgba(0,0,0,.38);overflow:hidden}.life-board:before{content:"";position:absolute;width:270px;height:270px;border-radius:50%;right:-100px;top:-110px;background:rgba(183,255,0,.12)}.phone{border-radius:24px;background:#050709;border:1px solid #35414c;padding:18px;position:relative;z-index:2;box-shadow:inset 0 0 0 4px #0b0f13}.status{display:flex;justify-content:space-between;font-size:11px;color:#7f8b96;margin-bottom:22px}.phone h3{font-size:27px;line-height:1.05;letter-spacing:-.035em;margin:0}.phone h3 span{color:var(--lime)}.balance{margin:20px 0;padding:19px;border:1px solid #364822;background:linear-gradient(135deg,#121a0b,#0d1319);border-radius:18px}.balance small{color:#91a079}.balance b{display:block;color:var(--lime);font-size:38px;margin:4px 0}.balance span{font-size:12px;color:#aeb8c1}.mini-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.mini-card{border:1px solid var(--line);background:#0e141a;border-radius:14px;padding:13px}.mini-card b{display:block;font-size:14px}.mini-card span{display:block;color:#87939e;font-size:11px;margin-top:4px}.lifestyle-strip{margin-top:12px;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.life{min-height:110px;border-radius:17px;padding:14px;display:flex;flex-direction:column;justify-content:flex-end;border:1px solid rgba(255,255,255,.07)}.life.one{background:linear-gradient(145deg,#15200f,#0e1614)}.life.two{background:linear-gradient(145deg,#111926,#10141a)}.life.three{background:linear-gradient(145deg,#201816,#121316)}.life .emoji{font-size:27px}.life b{font-size:12px;margin-top:12px}.life span{font-size:10px;color:#9ca7b2;margin-top:3px}.section{padding:76px 0}.section-head{max-width:850px}.kicker{color:var(--lime);text-transform:uppercase;letter-spacing:.12em;font-size:12px;font-weight:950}h2{font-size:clamp(37px,5.2vw,57px);line-height:1.03;letter-spacing:-.048em;margin:10px 0 16px}.intro{font-size:18px;line-height:1.65;color:var(--muted)}.reality{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:32px}.reality-card{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:22px}.reality-card .icon{font-size:28px}.reality-card h3{font-size:18px;margin:14px 0 8px}.reality-card p{font-size:14px;color:var(--muted);line-height:1.55;margin:0}.global{background:linear-gradient(145deg,#0e151b,#0b1015);border:1px solid #28343e;border-radius:28px;padding:34px;margin-top:32px}.country-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:24px}.country{background:#0a0f14;border:1px solid #26313b;border-radius:16px;padding:18px}.country b{display:block;font-size:16px}.country span{display:block;color:#9eabb7;font-size:13px;line-height:1.55;margin-top:7px}.commission-hero{display:grid;grid-template-columns:.9fr 1.1fr;gap:24px;align-items:stretch;margin-top:32px}.rate-box{background:var(--lime);color:#080b0d;border-radius:26px;padding:31px;position:relative;overflow:hidden}.rate-box:after{content:"%";position:absolute;font-size:180px;font-weight:950;opacity:.11;right:-15px;bottom:-65px}.rate-box small{font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.1em}.rate-box .rate{font-size:76px;font-weight:950;line-height:.92;letter-spacing:-.06em;margin:11px 0}.rate-box h3{font-size:24px;margin:15px 0 8px}.rate-box p{font-size:14px;line-height:1.55;font-weight:650}.levels{background:#0d1319;border:1px solid var(--line);border-radius:26px;padding:24px}.level{display:grid;grid-template-columns:70px 1fr auto;gap:13px;align-items:center;padding:14px 0;border-bottom:1px solid #222d36}.level:last-child{border-bottom:0}.level .pct{font-size:24px;font-weight:950;color:var(--lime)}.level b{display:block}.level span{font-size:12px;color:#8996a2}.lock{font-size:11px;padding:6px 8px;border-radius:999px;background:#141c24;color:#adb8c2}.calc{margin-top:25px;background:linear-gradient(145deg,#111922,#0d1218);border:1px solid #2a3742;border-radius:27px;padding:27px}.calc-top{display:grid;grid-template-columns:1fr 1fr 1fr;gap:13px}.field label{display:block;color:#8d99a4;font-size:11px;font-weight:850;text-transform:uppercase;letter-spacing:.08em;margin-bottom:7px}.field select,.field input{width:100%;background:#080c10;color:#eef2f5;border:1px solid #2c3945;border-radius:12px;padding:13px 14px;outline:none}.result-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:20px}.result{background:#080c10;border:1px solid #28343e;border-radius:16px;padding:17px}.result span{display:block;color:#82909c;font-size:11px;text-transform:uppercase;letter-spacing:.07em}.result b{display:block;font-size:24px;color:var(--lime);margin-top:6px}.result.main{border-color:#57731e;background:#101608}.calc-note{color:#75818d;font-size:11px;line-height:1.55;margin-top:14px}.products{display:grid;grid-template-columns:repeat(3,1fr);gap:19px;margin-top:32px}.product{display:flex;flex-direction:column;position:relative;overflow:hidden;min-height:485px;border-radius:24px;padding:26px;background:linear-gradient(180deg,#111923,#0b1015);border:1px solid #2a3640}.product:after{content:"";position:absolute;width:220px;height:220px;border-radius:50%;right:-110px;bottom:-120px;background:rgba(183,255,0,.07)}.product.featured{border-color:#607c20;box-shadow:0 0 0 1px rgba(183,255,0,.11),0 20px 70px rgba(183,255,0,.04)}.tag{align-self:flex-start;border:1px solid #3a4b1b;background:#131a09;color:var(--lime-soft);border-radius:999px;padding:7px 10px;font-size:10px;font-weight:950;text-transform:uppercase;letter-spacing:.08em}.product h3{font-size:28px;letter-spacing:-.03em;margin:17px 0 7px}.product .price{font-size:16px;font-weight:850}.commission-chip{display:inline-block;margin:12px 0 5px;color:#080b0d;background:var(--lime);padding:8px 10px;border-radius:10px;font-size:13px;font-weight:950;align-self:flex-start}.product p{color:var(--muted);line-height:1.55}.product ul{padding-left:18px;color:#bcc6cf;line-height:1.7}.product .bottom{margin-top:auto;position:relative;z-index:2}.product .btn{width:100%}.earnline{font-size:12px;color:#9eabb6;margin:10px 0 15px}.earnline strong{color:#fff}.creator-life{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:center}.life-copy{border-radius:28px;padding:34px;background:linear-gradient(145deg,#0f171d,#0c1116);border:1px solid #28343e}.life-copy h3{font-size:40px;line-height:1.05;letter-spacing:-.04em;margin:0 0 15px}.life-copy p{font-size:17px;line-height:1.65;color:var(--muted)}.goal-grid{display:grid;grid-template-columns:1fr 1fr;gap:11px}.goal{min-height:150px;border-radius:20px;padding:19px;display:flex;flex-direction:column;justify-content:space-between;border:1px solid rgba(255,255,255,.07)}.goal:nth-child(1){background:linear-gradient(145deg,#171f0d,#0c1210)}.goal:nth-child(2){background:linear-gradient(145deg,#101928,#0d1218)}.goal:nth-child(3){background:linear-gradient(145deg,#21160f,#101316)}.goal:nth-child(4){background:linear-gradient(145deg,#151022,#101218)}.goal .emoji{font-size:30px}.goal b{font-size:15px}.goal span{font-size:11px;color:#a3aeb8}.challenge{background:linear-gradient(90deg,var(--lime),#8fe900);color:#080b0d;border-radius:27px;padding:32px;display:grid;grid-template-columns:.8fr 1.2fr;gap:25px;align-items:center}.challenge h3{font-size:40px;line-height:1.02;letter-spacing:-.04em;margin:0}.challenge p{font-weight:650;line-height:1.55}.days{display:grid;grid-template-columns:repeat(7,1fr);gap:9px;margin-top:25px}.day{background:#0e151b;border:1px solid var(--line);border-radius:14px;padding:14px;min-height:135px}.day b{color:var(--lime);font-size:13px}.day p{font-size:12px;line-height:1.45;color:#aab5bf;margin:8px 0 0}.founders{border-radius:28px;padding:40px;background:linear-gradient(145deg,#11190b,#0c1218 70%);border:1px solid #455b1c}.founders strong{color:var(--lime)}.faq{display:grid;gap:11px;margin-top:25px}details{background:#0d1319;border:1px solid var(--line);border-radius:15px;padding:18px 20px}summary{font-weight:850;cursor:pointer}details p{color:var(--muted);line-height:1.6}.final{margin:35px 0 72px;padding:55px 30px;text-align:center;border:1px solid #455b1c;border-radius:30px;background:linear-gradient(145deg,#11190c,#0c1218 72%)}.final h2{max-width:900px;margin:0 auto 16px}.final p{font-size:18px;color:#c5cdd5;max-width:800px;margin:0 auto}.final .btn{margin-top:21px}.disclaimer{max-width:880px;margin:18px auto 0;color:#77838f;font-size:11px;line-height:1.6}footer{border-top:1px solid rgba(255,255,255,.07);padding:29px 0 43px;color:#78848e;font-size:13px}.toast{position:fixed;z-index:50;left:50%;bottom:23px;transform:translate(-50%,30px);opacity:0;background:#f6f8fb;color:#080b0d;padding:12px 16px;border-radius:12px;font-weight:850;box-shadow:0 15px 50px rgba(0,0,0,.4);transition:.25s}.toast.show{opacity:1;transform:translate(-50%,0)}@media(max-width:980px){.hero,.commission-hero,.creator-life,.challenge{grid-template-columns:1fr}.reality,.country-grid{grid-template-columns:1fr 1fr}.products{grid-template-columns:1fr}.calc-top{grid-template-columns:1fr 1fr}.result-grid{grid-template-columns:1fr 1fr}.days{grid-template-columns:repeat(2,1fr)}}@media(max-width:600px){.container{width:min(100% - 26px,1180px)}.navlink{display:none}.hero{padding-top:45px;min-height:auto}.lead{font-size:18px}.actions .btn{width:100%}.lifestyle-strip{grid-template-columns:1fr}.reality,.country-grid,.goal-grid,.calc-top,.result-grid,.days{grid-template-columns:1fr}.section{padding:58px 0}.life-copy,.founders,.calc{padding:24px 20px}.level{grid-template-columns:58px 1fr}.lock{display:none}}
 </style>
 </head>
 <body>
 <div class="container">
-  <header class="nav">
-    <a href="#" class="logo">NEXA <span>CREATORS</span></a>
-    <a href="#produtos" class="navlink">Conhecer os produtos</a>
-  </header>
-
-  <main>
-    <section class="hero">
-      <div>
-        <div class="pill">⚡ Seleção inicial • Creators 18+</div>
-        <h1>Você não precisa criar um produto para começar a <strong>vender online.</strong></h1>
-        <p class="lead">A NEXA já criou as ofertas. Você escolhe a que combina com o seu público, recebe direção de conteúdo e usa seu próprio link de afiliado para buscar vendas.</p>
-        <div class="actions">
-          <button class="btn primary" onclick="goCreator('Quero entrar no NEXA Creators e escolher um produto.')">QUERO ENTRAR PARA O NEXA CREATORS</button>
-          <a class="btn secondary" href="#como">VER COMO FUNCIONA</a>
-        </div>
-        <div class="micro">Sem taxa de entrada. Sem promessa de renda garantida. O resultado depende das vendas atribuídas ao seu link.</div>
-      </div>
-
-      <aside class="hero-panel">
-        <div class="eyebrow">O que muda quando você entra</div>
-        <div class="big">3 ofertas</div>
-        <div style="color:#c0c8d0">em nichos diferentes para você não ficar preso a um único tipo de conteúdo.</div>
-        <div class="rule"></div>
-        <div class="benefit"><div class="dot">✓</div><div><b>Produto pronto</b><span>Você não precisa escrever e-book, montar checkout ou desenvolver uma oferta do zero.</span></div></div>
-        <div class="benefit"><div class="dot">✓</div><div><b>Kit Creator</b><span>Ganchos, ideias de vídeos, carrosséis, Stories e mensagens para adaptar ao seu perfil.</span></div></div>
-        <div class="benefit"><div class="dot">✓</div><div><b>Desafio Primeira Venda</b><span>Uma rota de 7 dias para transformar intenção em publicação e teste real.</span></div></div>
-      </aside>
-    </section>
-
-    <section class="section">
-      <div class="section-head">
-        <div class="kicker">O problema que queremos resolver</div>
-        <h2>Entrar como afiliado é fácil. Saber o que fazer depois é o que trava muita gente.</h2>
-        <p class="intro">Por isso o NEXA Creators não foi pensado como uma lista de links. A proposta é colocar produto, conteúdo e execução na mesma estrutura.</p>
-      </div>
-      <div class="grid3">
-        <article class="feature"><div class="ico">🎥</div><h3>Conteúdo mais fácil de produzir</h3><p>Ideias pensadas para vídeos curtos, antes/depois, curiosidade, histórias, dor e transformação — formatos simples de adaptar para TikTok e Reels.</p></article>
-        <article class="feature"><div class="ico">📱</div><h3>Comece com o que você já usa</h3><p>Celular, TikTok, Instagram e WhatsApp podem ser seus primeiros canais. Você não precisa esperar uma estrutura perfeita para publicar.</p></article>
-        <article class="feature"><div class="ico">📈</div><h3>Teste e melhore</h3><p>O foco é aprender quais ganchos chamam atenção, quais conteúdos geram cliques e quais formatos merecem ser repetidos.</p></article>
-      </div>
-    </section>
-
-    <section class="section" id="produtos">
-      <div class="section-head">
-        <div class="kicker">Catálogo inicial</div>
-        <h2>Três produtos. Três públicos. Escolha onde você consegue criar melhor.</h2>
-        <p class="intro">Você não precisa divulgar os três. Escolha uma oferta que combine com o seu estilo de conteúdo e comece por ela.</p>
-      </div>
-
-      <div class="products">
-        <article class="product">
-          <span class="tag">Mulher • Rotina • Transformação</span>
-          <h3>Método 3•3•21 Mulher</h3>
-          <div class="price">Preço ao cliente: R$ 47,00</div>
-          <p>Uma oferta que pode ser trabalhada com conteúdo feminino, rotina, transformação, hábitos e identificação.</p>
-          <ul>
-            <li>Boa para vídeos curtos e carrosséis</li>
-            <li>Conteúdo visual e de fácil entendimento</li>
-            <li>Produto digital já ativo</li>
-          </ul>
-          <div class="bottom">
-            <button class="btn primary" onclick="goCreator('Quero divulgar o Método 3-3-21 Mulher no NEXA Creators.')">QUERO ESTE PRODUTO</button>
-            <div class="message">Nós direcionamos você para a etapa de afiliação.</div>
-          </div>
-        </article>
-
-        <article class="product featured">
-          <span class="tag">Renda online • Produto em destaque</span>
-          <h3>O Novo Afiliado 2027</h3>
-          <div class="price">Preço ao cliente: R$ 39,90</div>
-          <p>Uma oferta alinhada com quem já cria ou quer criar conteúdo sobre renda online, marketing digital, celular, tecnologia e IA.</p>
-          <ul>
-            <li>Excelente para TikTok, Shorts e Reels</li>
-            <li>Forte conexão com público iniciante</li>
-            <li>Permite muitos ganchos de curiosidade</li>
-          </ul>
-          <div class="bottom">
-            <button class="btn primary" onclick="goCreator('Quero divulgar O Novo Afiliado 2027 no NEXA Creators.')">QUERO ESTE PRODUTO</button>
-            <div class="message">Nós direcionamos você para a etapa de afiliação.</div>
-          </div>
-        </article>
-
-        <article class="product">
-          <span class="tag">Relacionamentos • Storytelling</span>
-          <h3>Método Reconexão</h3>
-          <div class="price">Preço ao cliente: R$ 67,00</div>
-          <p>Programa digital de 21 dias voltado a reflexão, comunicação e reconexão no relacionamento, sem prometer “salvar” qualquer relação.</p>
-          <ul>
-            <li>Forte para histórias e identificação</li>
-            <li>Conteúdo emocional e de relacionamento</li>
-            <li>Comissão configurada na plataforma do produto</li>
-          </ul>
-          <div class="bottom">
-            <button class="btn primary" onclick="goCreator('Quero divulgar o Método Reconexão no NEXA Creators.')">QUERO ESTE PRODUTO</button>
-            <div class="message">Nós direcionamos você para a etapa de afiliação.</div>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="section" id="como">
-      <div class="band">
-        <div>
-          <h3>Você cria. A NEXA cuida da oferta.</h3>
-          <p>O Creator não precisa começar construindo produto, página e checkout. O foco dele é aprender a criar atenção e direcionar o público corretamente.</p>
-        </div>
-        <div class="black">
-          <b>O objetivo inicial não é “ficar rico”.</b>
-          É colocar uma oferta real na rua, aprender com os dados e construir consistência.
-        </div>
-      </div>
-
-      <div class="steps">
-        <div class="step"><span>Passo 01</span><b>Escolha seu produto</b></div>
-        <div class="step"><span>Passo 02</span><b>Entre como afiliado</b></div>
-        <div class="step"><span>Passo 03</span><b>Receba o Kit Creator</b></div>
-        <div class="step"><span>Passo 04</span><b>Publique, teste e melhore</b></div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="section-head">
-        <div class="kicker">Desafio Primeira Venda</div>
-        <h2>7 dias para sair da teoria.</h2>
-        <p class="intro">Uma sequência simples para o Creator deixar de apenas “ter um link” e começar de fato a trabalhar a divulgação.</p>
-      </div>
-      <div class="days">
-        <div class="day"><b>DIA 1</b><p>Escolha o produto e entenda para quem ele foi criado.</p></div>
-        <div class="day"><b>DIA 2</b><p>Publique seu primeiro vídeo com um gancho de problema.</p></div>
-        <div class="day"><b>DIA 3</b><p>Use Stories e WhatsApp com uma abordagem diferente.</p></div>
-        <div class="day"><b>DIA 4</b><p>Teste um novo começo para o mesmo assunto.</p></div>
-        <div class="day"><b>DIA 5</b><p>Crie conteúdo de curiosidade ou transformação.</p></div>
-        <div class="day"><b>DIA 6</b><p>Faça uma chamada para ação clara e simples.</p></div>
-        <div class="day"><b>DIA 7</b><p>Revise o que gerou mais reação e repita melhor.</p></div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="founders">
-        <div class="kicker">Primeira fase</div>
-        <h2>Estamos formando o grupo inicial de <strong>20 Creators ativos.</strong></h2>
-        <p class="intro">Não estamos procurando apenas pessoas para entrar em um link. Queremos os primeiros Creators dispostos a publicar, testar e construir resultado junto com a estrutura.</p>
-        <div class="actions">
-          <button class="btn primary" onclick="goCreator('Quero me candidatar para o grupo inicial de NEXA Creators.')">QUERO PARTICIPAR DA SELEÇÃO</button>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="section-head">
-        <div class="kicker">Perguntas rápidas</div>
-        <h2>Antes de entrar.</h2>
-      </div>
-      <div class="faq">
-        <details><summary>Preciso ter milhares de seguidores?</summary><p>Não. Perfis pequenos também podem participar. O mais importante nessa fase é estar disposto a publicar e testar conteúdo de verdade.</p></details>
-        <details><summary>Preciso criar meu próprio produto?</summary><p>Não. Os produtos apresentados nesta página já fazem parte do catálogo inicial da NEXA Creators.</p></details>
-        <details><summary>Existe garantia de ganho?</summary><p>Não. Afiliado recebe comissão quando uma venda válida é atribuída ao seu link, seguindo as condições do produto e da plataforma. Resultado depende da execução e não é garantido.</p></details>
-        <details><summary>Preciso pagar para entrar no programa?</summary><p>Não há taxa de entrada para participar da seleção inicial do NEXA Creators.</p></details>
-      </div>
-    </section>
-
-    <section class="final">
-      <h2>Talvez você não precise de mais um curso sobre começar. Talvez precise de uma oferta e de um motivo para publicar hoje.</h2>
-      <p>Escolha seu produto e fale com a NEXA para entrar na seleção inicial.</p>
-      <button class="btn primary" onclick="goCreator('Quero começar agora no NEXA Creators.')">QUERO SER UM NEXA CREATOR</button>
-      <div class="disclaimer">Programa destinado a maiores de 18 anos. Não há garantia de faturamento, comissão ou resultado. Comissões, atribuição de vendas, aprovação de afiliação, reembolsos e pagamentos seguem as configurações e regras da plataforma e de cada produto.</div>
-    </section>
-  </main>
-
-  <footer><b>NEXA Creators</b> • O Futuro é Agora</footer>
-</div>
-
-<div class="toast" id="toast">Mensagem copiada. Abrindo o Instagram da NEXA…</div>
-
+<header class="nav"><a href="#" class="logo">NEXA <span>CREATORS</span></a><div class="nav-actions"><a class="navlink" href="#comissao">Comissão</a><a class="navlink" href="#produtos">Produtos</a><button class="navcta" onclick="goCreator('Quero entrar para o NEXA Creators.')">Entrar</button></div></header>
+<main>
+<section class="hero"><div><div class="pill">⚡ Para maiores de 18 anos • Creators, afiliados e iniciantes</div><h1>Crie do seu jeito.<br>Venda no seu ritmo.<br><strong>Evolua por resultado.</strong></h1><p class="lead">Você já usa celular, TikTok, Instagram, WhatsApp e IA. O NEXA Creators transforma essas ferramentas em uma operação real: produto pronto, comissão, direção de conteúdo, desafio e progressão.</p><div class="hero-badges"><span class="badge">📱 Celular</span><span class="badge">🎬 Conteúdo curto</span><span class="badge">🤖 IA</span><span class="badge">💸 Renda extra</span><span class="badge">🏆 Ranking</span><span class="badge">🌎 De onde você estiver</span></div><div class="actions"><button class="btn primary" onclick="goCreator('Quero participar do NEXA Creators e escolher meu produto.')">QUERO SER CREATOR</button><a class="btn secondary" href="#comissao">VER QUANTO POSSO RECEBER</a></div><div class="micro">Não existe garantia de renda. Você recebe comissão somente sobre vendas válidas atribuídas ao seu link, conforme as regras da Kiwify e do produto.</div></div><aside class="life-board"><div class="phone"><div class="status"><span>10:44</span><span>NEXA Creator • online</span></div><h3>Seu conteúdo.<br><span>Seu progresso.</span></h3><div class="balance"><small>EXEMPLO • NÍVEL ELITE 75%</small><b>R$ 302,14</b><span>simulação de 10 vendas do Método 3•3•21 Mulher</span></div><div class="mini-grid"><div class="mini-card"><b>10 vendas</b><span>uma meta simples de visualizar</span></div><div class="mini-card"><b>100 vendas</b><span>uma operação para construir</span></div></div></div><div class="lifestyle-strip"><div class="life one"><div class="emoji">☕📱</div><b>Trabalhe no seu horário</b><span>conteúdo cabe na rotina</span></div><div class="life two"><div class="emoji">✈️💻</div><b>Mobilidade</b><span>operação digital</span></div><div class="life three"><div class="emoji">🎯💸</div><b>Metas reais</b><span>acompanhe venda por venda</span></div></div></aside></section>
+<section class="section"><div class="section-head"><div class="kicker">O que a nova geração procura</div><h2>Mais autonomia. Mais habilidade. Menos dependência de um único caminho.</h2><p class="intro">A proposta não é vender um sonho de dinheiro fácil. É oferecer uma rota prática para quem quer aprender venda digital, conteúdo e distribuição enquanto busca uma fonte complementar de renda.</p></div><div class="reality"><article class="reality-card"><div class="icon">⏱️</div><h3>Flexibilidade</h3><p>Produzir sem depender de horário comercial ou presença física.</p></article><article class="reality-card"><div class="icon">🧠</div><h3>Habilidade que fica</h3><p>Aprender copy, vídeo, IA, oferta, vendas e análise de resultado.</p></article><article class="reality-card"><div class="icon">🤝</div><h3>Comunidade</h3><p>Não ficar sozinho com um link. Ter desafio, materiais e progressão.</p></article><article class="reality-card"><div class="icon">📈</div><h3>Progresso visível</h3><p>Metas pequenas primeiro; escala depois. Uma venda vira dado para a próxima.</p></article></div><div class="global"><div class="kicker">Modelo inspirado no que está crescendo fora</div><h2 style="font-size:35px;margin-top:9px">Pegamos ideias de ecossistemas de creators de vários mercados e adaptamos para a NEXA.</h2><div class="country-grid"><div class="country"><b>🇺🇸 Estados Unidos</b><span>Creators monetizando o conteúdo que já produzem, performance mensurável e uso crescente de IA para acelerar o trabalho.</span></div><div class="country"><b>🇬🇧 Reino Unido</b><span>Playbooks “do zero à primeira venda”, desafios, recompensas e colaborações com comissão maior para creators selecionados.</span></div><div class="country"><b>🇧🇷 Brasil</b><span>Vídeos curtos, LIVE, compra por descoberta e uma explosão no número de creators afiliados ativos.</span></div><div class="country"><b>🌏 Sudeste Asiático</b><span>Status de Creator, badges, campanhas, formação, links externos e gamificação para manter creators ativos.</span></div></div></div></section>
+<section class="section" id="comissao"><div class="section-head"><div class="kicker">Comissão NEXA Creators</div><h2>Você precisa saber quanto uma venda vale antes de decidir divulgar.</h2><p class="intro">Nossa proposta de estrutura começa em 60% e pode chegar a 75% para Creators de performance. A Kiwify calcula a comissão depois das taxas da plataforma; por isso mostramos abaixo valores aproximados já considerando a taxa padrão divulgada pela Kiwify.</p></div><div class="commission-hero"><div class="rate-box"><small>Faixa máxima proposta</small><div class="rate">75%</div><h3>Creator Elite</h3><p>Comissão personalizada para Creators que atingirem os critérios de performance do programa. Comissão real sempre deve ser conferida no convite e no painel da Kiwify.</p></div><div class="levels"><div class="level"><div class="pct">60%</div><div><b>STARTER</b><span>entrada no programa e primeiros testes</span></div><div class="lock">início</div></div><div class="level"><div class="pct">65%</div><div><b>CREATOR</b><span>a partir de 10 vendas aprovadas*</span></div><div class="lock">nível 2</div></div><div class="level"><div class="pct">70%</div><div><b>PRO</b><span>a partir de 30 vendas aprovadas*</span></div><div class="lock">nível 3</div></div><div class="level"><div class="pct">75%</div><div><b>ELITE</b><span>a partir de 100 vendas aprovadas*</span></div><div class="lock">top tier</div></div><div class="micro">*Estrutura proposta do NEXA Creators. A comissão personalizada precisa ser confirmada/configurada para o afiliado na Kiwify.</div></div></div><div class="calc"><div class="kicker">Simulador de comissão</div><h2 style="font-size:35px;margin-top:8px">Troque o produto, o nível e a quantidade de vendas.</h2><div class="calc-top"><div class="field"><label>Produto</label><select id="productSelect"><option value="47">Método 3•3•21 Mulher — R$ 47,00</option><option value="39.9">O Novo Afiliado 2027 — R$ 39,90</option><option value="67">Método Reconexão — R$ 67,00</option></select></div><div class="field"><label>Nível de comissão</label><select id="rateSelect"><option value="0.60">Starter — 60%</option><option value="0.65">Creator — 65%</option><option value="0.70">Pro — 70%</option><option value="0.75" selected>Elite — 75%</option></select></div><div class="field"><label>Quantidade de vendas</label><input id="salesInput" type="number" min="1" max="10000" value="10"></div></div><div class="result-grid"><div class="result"><span>Comissão por venda</span><b id="perSale">R$ 30,21</b></div><div class="result main"><span>Total simulado</span><b id="totalEarn">R$ 302,14</b></div><div class="result"><span>50 vendas</span><b id="fiftyEarn">R$ 1.510,68</b></div><div class="result"><span>100 vendas</span><b id="hundredEarn">R$ 3.021,35</b></div></div><div class="calc-note">Simulação matemática, não promessa de ganhos. Usamos como referência a taxa padrão da Kiwify de 8,99% + R$ 2,49 por venda e a regra informada pela Kiwify de que a comissão percentual é aplicada após as taxas. Descontos, cupons, reembolsos, chargebacks, antecipações e condições específicas podem alterar o valor final.</div></div></section>
+<section class="section" id="produtos"><div class="section-head"><div class="kicker">Escolha seu mercado</div><h2>Não tente vender tudo. Escolha o assunto que você consegue transformar em conteúdo.</h2></div><div class="products"><article class="product"><span class="tag">Mulher • Rotina • Transformação</span><h3>Método 3•3•21 Mulher</h3><div class="price">Preço: R$ 47,00</div><div class="commission-chip">Até 75% • aprox. R$ 30,21/venda no Elite</div><p>Boa opção para creators que gostam de conteúdo feminino, rotina, transformação e hábitos.</p><ul><li>Vídeos curtos e carrosséis</li><li>Ganchos de curiosidade e transformação</li><li>10 vendas no Elite ≈ R$ 302,14</li><li>100 vendas no Elite ≈ R$ 3.021,35</li></ul><div class="bottom"><div class="earnline"><strong>Meta visual:</strong> 10 vendas já passam de R$ 300 no nível Elite.</div><button class="btn primary" onclick="goCreator('Quero divulgar o Método 3-3-21 Mulher no NEXA Creators.')">QUERO DIVULGAR ESTE</button></div></article><article class="product featured"><span class="tag">Renda online • Tecnologia • IA</span><h3>O Novo Afiliado 2027</h3><div class="price">Preço: R$ 39,90</div><div class="commission-chip">Até 75% • aprox. R$ 25,37/venda no Elite</div><p>Produto alinhado com conteúdo de renda extra, celular, marketing digital, tecnologia e inteligência artificial.</p><ul><li>TikTok, Reels e Shorts</li><li>Muitos ganchos de “como começar”</li><li>10 vendas no Elite ≈ R$ 253,67</li><li>100 vendas no Elite ≈ R$ 2.536,72</li></ul><div class="bottom"><div class="earnline"><strong>Perfil ideal:</strong> creators de dinheiro, IA, negócios e vida digital.</div><button class="btn primary" onclick="goCreator('Quero divulgar O Novo Afiliado 2027 no NEXA Creators.')">QUERO DIVULGAR ESTE</button></div></article><article class="product"><span class="tag">Relacionamentos • Storytelling</span><h3>Método Reconexão</h3><div class="price">Preço: R$ 67,00</div><div class="commission-chip">Até 75% • aprox. R$ 43,87/venda no Elite</div><p>Produto de 21 dias para reflexão, comunicação e reconexão no relacionamento, sem promessa de salvar qualquer relação.</p><ul><li>Conteúdo emocional e histórias</li><li>Vídeos de identificação</li><li>10 vendas no Elite ≈ R$ 438,65</li><li>100 vendas no Elite ≈ R$ 4.386,50</li></ul><div class="bottom"><div class="earnline"><strong>Maior comissão unitária:</strong> aproximadamente R$ 43,87 no nível Elite.</div><button class="btn primary" onclick="goCreator('Quero divulgar o Método Reconexão no NEXA Creators.')">QUERO DIVULGAR ESTE</button></div></article></div><div class="calc-note" style="margin-top:15px">Se um Creator realizasse 100 vendas válidas de cada um dos três produtos já no nível Elite de 75%, a soma matemática aproximada seria R$ 9.944,57 em comissões. Isso é apenas um cenário de cálculo e não uma previsão ou garantia de resultado.</div></section>
+<section class="section"><div class="creator-life"><div class="life-copy"><div class="kicker">Creator lifestyle</div><h3>Não é sobre posar com carro alugado. É sobre construir pequenas liberdades reais.</h3><p>Um jovem pode querer pagar a própria academia, melhorar o celular, criar uma reserva, sair no fim de semana sem pedir dinheiro ou simplesmente aprender a vender. Metas concretas são mais fortes do que promessa de “milhões”.</p><p>Por isso a NEXA trabalha com metas de vendas, progresso e habilidade — não com fantasia de enriquecimento instantâneo.</p></div><div class="goal-grid"><div class="goal"><div class="emoji">📱</div><div><b>Upgrade no setup</b><span>celular, microfone, iluminação</span></div></div><div class="goal"><div class="emoji">🏋️</div><div><b>Pagar coisas suas</b><span>academia, assinatura, combustível</span></div></div><div class="goal"><div class="emoji">🏦</div><div><b>Criar uma reserva</b><span>começar a guardar com objetivo</span></div></div><div class="goal"><div class="emoji">🌴</div><div><b>Mais escolha</b><span>tempo, lazer e experiências</span></div></div></div></div></section>
+<section class="section"><div class="challenge"><div><h3>Desafio<br>Primeira Venda</h3><p>O creator entra com uma missão de 7 dias. Nada de receber um link e desaparecer.</p></div><div><b>REGRA DO DESAFIO:</b><br>publicar, testar formatos diferentes, analisar respostas e melhorar a próxima peça. O primeiro objetivo é criar movimento, não perfeição.</div></div><div class="days"><div class="day"><b>DIA 1</b><p>Escolha o produto e o público.</p></div><div class="day"><b>DIA 2</b><p>Primeiro vídeo com um problema claro.</p></div><div class="day"><b>DIA 3</b><p>Stories + WhatsApp.</p></div><div class="day"><b>DIA 4</b><p>Novo gancho, mesma oferta.</p></div><div class="day"><b>DIA 5</b><p>Curiosidade, lista ou transformação.</p></div><div class="day"><b>DIA 6</b><p>CTA mais claro.</p></div><div class="day"><b>DIA 7</b><p>Analise e repita o que respondeu melhor.</p></div></div></section>
+<section class="section"><div class="founders"><div class="kicker">NEXA Founding Creators</div><h2>Queremos os primeiros <strong>20 creators que realmente publicam</strong>, não 500 pessoas paradas em um grupo.</h2><p class="intro">Os Creators fundadores ajudam a testar os materiais, os desafios e o sistema de níveis. Quem performar poderá receber comissão personalizada conforme as regras do programa e disponibilidade do produto.</p><div class="actions"><button class="btn primary" onclick="goCreator('Quero me candidatar para ser um dos 20 NEXA Founding Creators.')">QUERO UMA DAS 20 VAGAS</button></div></div></section>
+<section class="section"><div class="section-head"><div class="kicker">Perguntas rápidas</div><h2>Sem enrolação.</h2></div><div class="faq"><details><summary>Preciso ter muitos seguidores?</summary><p>Não. Nesta fase queremos maiores de 18 anos dispostos a criar e testar. Um perfil pequeno com conteúdo consistente pode ser mais interessante do que um perfil grande e parado.</p></details><details><summary>A comissão de 75% é garantida para todo mundo?</summary><p>Não. 75% é o nível máximo proposto do programa. A comissão efetiva de cada afiliado deve estar configurada e confirmada no convite/painel da Kiwify.</p></details><details><summary>Os valores do simulador são garantidos?</summary><p>Não. São simulações matemáticas. O valor real depende do preço efetivamente pago, taxas, cupons, reembolso, chargeback, comissão configurada e atribuição da venda.</p></details><details><summary>Preciso pagar para participar?</summary><p>Não há taxa de entrada para participar da seleção inicial do NEXA Creators.</p></details><details><summary>O que eu recebo depois de entrar?</summary><p>Produto para divulgar, Kit Creator, ideias de conteúdo, desafio de 7 dias e orientação sobre como organizar os primeiros testes de divulgação.</p></details></div></section>
+<section class="final"><h2>Você já passa horas no celular. A diferença é aprender a transformar atenção em habilidade e habilidade em oportunidade.</h2><p>Escolha um produto, entre para a seleção e comece com uma meta que você consegue enxergar.</p><button class="btn primary" onclick="goCreator('Quero começar agora no NEXA Creators.')">QUERO COMEÇAR</button><div class="disclaimer">Programa para maiores de 18 anos. Nenhum valor nesta página representa promessa de renda. Comissões dependem de vendas válidas atribuídas ao afiliado e seguem as configurações da Kiwify. As faixas de 60%, 65%, 70% e 75% representam a estrutura proposta do programa e precisam ser efetivamente configuradas no painel para cada afiliado elegível antes de sua aplicação.</div></section>
+</main><footer><b>NEXA Creators</b> • O Futuro é Agora</footer></div><div class="toast" id="toast">Mensagem copiada. Abrindo o Instagram da NEXA…</div>
 <script>
-const instagram = "https://www.instagram.com/nexaoficial_/";
-function goCreator(message){
-  const text = message + " Vi a página NEXA Creators.";
-  if(navigator.clipboard && window.isSecureContext){
-    navigator.clipboard.writeText(text).catch(()=>{});
-  }
-  const toast=document.getElementById("toast");
-  toast.classList.add("show");
-  setTimeout(()=>toast.classList.remove("show"),2200);
-  setTimeout(()=>window.open(instagram,"_blank"),350);
-}
+const instagram="https://www.instagram.com/nexaoficial_/";const brl=new Intl.NumberFormat('pt-BR',{style:'currency',currency:'BRL'});function calcCommission(){const price=parseFloat(document.getElementById('productSelect').value);const rate=parseFloat(document.getElementById('rateSelect').value);const sales=Math.max(1,parseInt(document.getElementById('salesInput').value||'1',10));const kiwifyFee=(price*0.0899)+2.49;const commissionBase=Math.max(0,price-kiwifyFee);const perSale=commissionBase*rate;document.getElementById('perSale').textContent=brl.format(perSale);document.getElementById('totalEarn').textContent=brl.format(perSale*sales);document.getElementById('fiftyEarn').textContent=brl.format(perSale*50);document.getElementById('hundredEarn').textContent=brl.format(perSale*100)}['productSelect','rateSelect','salesInput'].forEach(id=>document.getElementById(id).addEventListener('input',calcCommission));calcCommission();function goCreator(message){const text=message+" Vi a página NEXA Creators.";if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(text).catch(()=>{})}const toast=document.getElementById('toast');toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),2200);setTimeout(()=>window.open(instagram,'_blank'),350)}
 </script>
 </body>
 </html>
